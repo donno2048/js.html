@@ -1,97 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
     <head>
-
         <meta charset="utf-8">
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>JS compiler</title>
-
         <style>
-
             body > * {
-
                 position: absolute;
-
             }
-            
             button {
-
                 width: 50%;
-
             }
-
             textarea {
-
                 width: 40%;
-
                 height: 80%;
-
             }
-
             #input {
-
                 left: 0;
-
             }
-
             #output {
-
                 right: 0;
-
             }
-
             #submit {
-
                 height: 5%;
-
                 bottom: 10%;
-
                 transform: translateX(50%);
-
             }
-
             #reset {
-
                 height: 5%;
-
                 bottom: 2.5%;
-
                 transform: translateX(50%);
-
             }
-
         </style>
-
     </head>
-
     <body>
-
         <textarea id="input" placeholder="Use console.log to log to the console and print to print to the output"></textarea>
-
         <textarea readonly id="output" placeholder="OUTPUT"></textarea>
-
         <button id="submit">RUN</button>
-
         <button id="reset">RESET</button>
-
         <script>
-
             document.getElementById("submit").onclick = () => {
-
                 print = (e) => document.getElementById("output").value += `${e}\n`;
-
                 try {eval(document.getElementById("input").value)} catch (e) {print(e)}
-
             };
-
             document.getElementById("reset").onclick = () => document.getElementById("output").value = "";
-
         </script>
-
     </body>
-
 </html>
